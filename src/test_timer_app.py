@@ -20,14 +20,12 @@ def test_add_note_button(page: Page):
     page.goto("https://lejonmanen.github.io/timer-vue/")
 
     # 2. Kontrollera att knappen "Add note" finns och är synlig.
-    add_note_button = page.locator('button:has-text("Add timer")')
+    add_note_button = page.locator('button:has-text("Add note")')
     expect(add_note_button).to_be_visible()
 
     # 3. Klicka på knappen "Add note".
     add_note_button.click()
 
     # 4. Kontrollera att en text "Click to change text" visas på skärmen.
-    note_text = page.get_by_role("heading")
+    note_text = page.locator('h3:has-text("Click to change text")')
     expect(note_text).to_be_visible()
-
-
