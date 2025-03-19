@@ -40,7 +40,7 @@
 10. Testar delete button (korgen)
 
 ## User story [U3] 
-### Som en användare vill jag kunna se att timern startar från 15:00 och att den kan resettas eller startas.
+### Som en användare vill jag kunna se att timern startar från 15:00 och att den kan reset eller startas.
 
 ## Acceptanskriterier
 [A1] Timern ska starta från 15:00.
@@ -48,7 +48,7 @@
 [A3] När man klickar på "Start" börjar timern räkna ner.
 [A4] När man klickar på "Reset" ska timern återställas till 15:00.
 
-## Testscenario [T2] – Timmerinteraktioner
+## Testscenario [T3] – Timmerinteraktioner
 1. Kontrollera att timern visas korrekt på sidan efter att du har klickat på knappen "Add timer".
 2. Kontrollera att timern startar från 15:00.
 3. Klicka på "Start" och kontrollera att timern börjar räkna ner.
