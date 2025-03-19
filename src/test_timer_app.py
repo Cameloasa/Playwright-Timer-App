@@ -29,3 +29,21 @@ def test_add_note_button(page: Page):
     # 4. Kontrollera att en text "Click to change text" visas på skärmen.
     note_text = page.locator('h3:has-text("Click to change text")')
     expect(note_text).to_be_visible()
+
+    # 5. Klicka på texten "Click to change text".
+    note_text.click()
+
+    # 6. Hitta input-fältet (som nu borde vara synligt)
+    note_input = page.locator('input[placeholder="Description"]')
+    expect(note_input).to_be_visible()
+
+    # 7. Fyll i ny text
+    note_input.fill("Note 1")
+
+    # 8. Tryck på "Enter" för att spara
+    page.keyboard.press("Enter")
+
+    # 9. Kontrollera att texten har ändrats till "Note 1"
+    updated_note_text = page.locator('h3:has-text("Note 1")')
+    expect(updated_note_text).to_be_visible()
+

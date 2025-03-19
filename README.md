@@ -27,17 +27,20 @@
 [A5] När man trycker på korgen, suddas texten bort.
 [A6] Det ska vara möjligt att ändra ordningen på noterna med hjälp av pilarna (upp eller ner).
 
-## Testscenario [T2] –  Kontrollera att knappen 'Add note' är synlig och kan klickas
+## Testscenario [T2] – Kontrollera att knappen 'Add note' är synlig och kan klickas, add och delete note
 1. Navigera till webbsidan.
 2. Kontrollera att knappen "Add note" finns och är synlig.
 3. Klicka på knappen "Add note".
 4. Kontrollera att en text "Click to change text" visas på skärmen.
-5. Klicka på texten "Click to change text" och ändra den till något som "Note 1".
-6. Tryck på "Enter" och kontrollera att texten är sparad.
-7. Klicka på "Add note" igen och addera en a doua notă, schimbând textul în "Note 2".
-8. Ändra ordningen på "Note 1" och "Note 2" när man klickar på pilen
-9. Kontrollera om ändringen sker dvs. om texterna har ändrad ordningen
-10. Testar delete button (korgen)
+5. Klicka på texten "Click to change text" 
+6. Hitta input-fältet (som nu borde vara synligt)
+7. Fyll i ny text till något som "Note 1"
+8. Tryck på "Enter" för att spara
+9. Kontrollera att texten har ändrats till "Note 1"
+10. Klicka på "Add note" igen och addera en ny text, ändra texten î "Note 2".
+11. Ändra ordningen på "Note 1" och "Note 2" när man klickar på pilen
+12. Kontrollera om ändringen sker dvs. om texterna har ändrad ordningen
+13. Testar delete button (korgen)
 
 ## User story [U3] 
 ### Som en användare vill jag kunna se att timern startar från 15:00 och att den kan reset eller startas.
