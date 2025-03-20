@@ -71,6 +71,25 @@ def test_add_note_button(page: Page):
     updated_second_note_text = page.locator('h3:has-text("Note 2")').last
     expect(updated_second_note_text).to_be_visible()
 
+    # 11. Ändra ordningen på "Note 1" och "Note 2" när man klickar på pilen
+    up_arrow_button = page.locator('.icon.up').first
+    up_arrow_button.click()
+
+    # 12. Kontrollera om ordningen har ändrats
+    expect(page.locator('h3:has-text("Note 2")')).to_be_visible()
+    expect(page.locator('h3:has-text("Note 1")')).to_be_visible()
+
+    # 13. Testar delete button (korgen)
+    delete_button = page.locator('.icon.close').first
+    delete_button.click()
+
+    # Kontrollera om texten tas bort
+    expect(page.locator('h3:has-text("Note 1")')).not_to_be_visible()
+    expect(page.locator('h3:has-text("Note 2")')).to_be_visible()
+
+
+
+
 
 
 
