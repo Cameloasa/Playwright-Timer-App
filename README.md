@@ -33,7 +33,7 @@
 3. Klicka på knappen "Add note".
 4. Kontrollera att en text "Click to change text" visas på skärmen.
 5. Klicka på texten "Click to change text" 
-6. Hitta input-fältet (som nu borde vara synligt)
+6. Hitta input-fältet 
 7. Fyll i ny text till något som "Note 1"
 8. Tryck på "Enter" för att spara
 9. Kontrollera att texten har ändrats till "Note 1"

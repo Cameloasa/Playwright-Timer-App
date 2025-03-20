@@ -27,14 +27,14 @@ def test_add_note_button(page: Page):
     add_note_button.click()
 
     # 4. Kontrollera att en text "Click to change text" visas på skärmen.
-    note_text = page.locator('h3:has-text("Click to change text")')
+    note_text = page.locator('h3:has-text("Click to change text")').first
     expect(note_text).to_be_visible()
 
     # 5. Klicka på texten "Click to change text".
     note_text.click()
 
-    # 6. Hitta input-fältet (som nu borde vara synligt)
-    note_input = page.locator('input[placeholder="Description"]')
+    # 6. Klicka på texten "Click to change text".
+    note_input = page.locator('input[placeholder="Description"]').first
     expect(note_input).to_be_visible()
 
     # 7. Fyll i ny text
@@ -44,6 +44,39 @@ def test_add_note_button(page: Page):
     page.keyboard.press("Enter")
 
     # 9. Kontrollera att texten har ändrats till "Note 1"
-    updated_note_text = page.locator('h3:has-text("Note 1")')
+    updated_note_text = page.locator('h3:has-text("Note 1")').first
     expect(updated_note_text).to_be_visible()
+
+    # 10. Klicka på "Add note" igen och addera en ny text, ändra texten till "Note 2".
+    add_note_button.click()
+
+    # Kontrollera att en text "Click to change text" visas på skärmen.
+    second_note_text = page.locator('h3:has-text("Click to change text")').last
+    expect(second_note_text).to_be_visible()
+
+    # Klicka på texten "Click to change text".
+    second_note_text.click()
+
+    # Klicka på texten "Click to change text".
+    second_note_input = page.locator('input[placeholder="Description"]').last
+    expect(second_note_input).to_be_visible()
+
+    # Fyll i ny text
+    second_note_input.fill("Note 2")
+
+    # Tryck på "Enter" för att spara
+    page.keyboard.press("Enter")
+
+    # Kontrollera att texten har ändrats till "Note 2"
+    updated_second_note_text = page.locator('h3:has-text("Note 2")').last
+    expect(updated_second_note_text).to_be_visible()
+
+
+
+
+
+
+
+
+
 
