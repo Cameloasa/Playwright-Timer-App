@@ -88,6 +88,7 @@ def test_add_note_button(page: Page):
     expect(page.locator('h3:has-text("Note 2")')).to_be_visible()
 
 def test_timer_start_and_reset(page: Page):
+    # 1. Kontrollera att timern visas korrekt på sidan efter att du har klickat på knappen "Add timer".
     # Navigera till timer app sidan
     page.goto("https://lejonmanen.github.io/timer-vue/")
 
