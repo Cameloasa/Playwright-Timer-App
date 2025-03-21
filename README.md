@@ -43,7 +43,7 @@
 13. Testar delete button (korgen)
 
 ## User story [U3] 
-### Som en användare vill jag kunna se att timern startar från 15:00 och att den kan reset eller startas.
+### Som en användare vill jag kunna se att timern startar från 15:00 och att den kan resetas eller startas.
 
 ## Acceptanskriterier
 [A1] Timern ska starta från 15:00.

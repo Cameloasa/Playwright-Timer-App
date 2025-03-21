@@ -87,6 +87,18 @@ def test_add_note_button(page: Page):
     expect(page.locator('h3:has-text("Note 1")')).not_to_be_visible()
     expect(page.locator('h3:has-text("Note 2")')).to_be_visible()
 
+def test_timer_start_and_reset(page: Page):
+    # Navigera till timer app sidan
+    page.goto("https://lejonmanen.github.io/timer-vue/")
+
+    # Kontrollera att knappen "Add timer" finns och är synlig.
+    add_timmer_button = page.locator('button:has-text("Add timer")')
+    expect(add_timmer_button).to_be_visible()
+
+    # Klicka på knappen "Add timer".
+    add_timmer_button.click()
+
+
 
 
 
