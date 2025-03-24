@@ -106,6 +106,10 @@ def test_timer_start_and_reset(page: Page):
     timer_text = page.locator('div.row.time')
     expect(timer_text).to_have_text("15:00")
 
+    # 3. Klicka på "Start" och kontrollera att timern börjar räkna ner.
+    start_button = page.locator('button:has-text("Start")')
+    start_button.click()
+
 
 
 
