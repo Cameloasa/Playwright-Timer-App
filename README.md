@@ -56,3 +56,19 @@
 2. Kontrollera att timern startar från 15:00.
 3. Klicka på "Start" och kontrollera att timern börjar räkna ner.
 4. Klicka på "Reset" och kontrollera att timern återställs till 15:00.
+
+## User story [U4] 
+### Som en användare vill jag kunna ändra titeln på en timer så att jag kan namnge olika aktiviteter
+
+## Acceptanskriterier
+[A1] En timer ska ha en titel, som standard är "Break".
+[A2] Det ska gå att klicka på titeln för att ändra den.
+[A3] När jag trycker "Enter" ska den nya titeln sparas.
+
+## Testscenario [T4] – Ändra titel på timer:
+1. Navigera till webbsidan.
+2. Klicka på "Add timer".
+3. Kontrollera att titeln "Break" visas.
+4. Klicka på titeln.
+5. Fyll i ny titel, t.ex. "Fika".
+6. Tryck på "Enter"
