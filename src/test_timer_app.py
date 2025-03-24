@@ -110,6 +110,11 @@ def test_timer_start_and_reset(page: Page):
     start_button = page.locator('button:has-text("Start")')
     start_button.click()
 
+    # 4. Klicka på "Reset" och kontrollera att timern återställs till 15:00.
+    reset_button = page.locator('button:has-text("Reset")')
+    reset_button.click()
+    expect(timer_text).to_have_text("15:00")
+
 
 
 
