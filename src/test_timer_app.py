@@ -99,6 +99,14 @@ def test_timer_start_and_reset(page: Page):
     # Klicka på knappen "Add timer".
     add_timmer_button.click()
 
+    # Kontrollera om timer är synlig
+    timer_display = page.locator("div.timer")
+
+    # 2. Kontrollera att timern startar från 15:00.
+    timer_text = page.locator('div.row.time')
+    expect(timer_text).to_have_text("15:00")
+
+
 
 
 
