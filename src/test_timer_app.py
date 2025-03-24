@@ -99,9 +99,6 @@ def test_timer_start_and_reset(page: Page):
     # Klicka på knappen "Add timer".
     add_timmer_button.click()
 
-    # Kontrollera om timer är synlig
-    timer_display = page.locator("div.timer")
-
     # 2. Kontrollera att timern startar från 15:00.
     timer_text = page.locator('div.row.time')
     expect(timer_text).to_have_text("15:00")
@@ -114,6 +111,35 @@ def test_timer_start_and_reset(page: Page):
     reset_button = page.locator('button:has-text("Reset")')
     reset_button.click()
     expect(timer_text).to_have_text("15:00")
+
+def test_change_timer_title(page: Page):
+    # 1. Navigera till webbsidan
+    page.goto("https://lejonmanen.github.io/timer-vue/")
+
+    # 2. Kontrollera att knappen "Add timer" finns och är synlig, klicka på den
+    add_timmer_button = page.locator('button:has-text("Add timer")')
+    expect(add_timmer_button).to_be_visible()
+    add_timmer_button.click()
+
+    # 3. Kontrollera att titeln "Break" visas.
+    timer_title = page.locator('h3')
+    expect(timer_title).to_have_text("Break 🖊️")
+
+    # 4. Klicka på titeln för att redigera den
+    timer_title.click()
+
+    # Fyll i en ny titel, t.ex. "Fika"
+    title_input = page.locator('input[placeholder="Title"]')
+    title_input.wait_for(state="visible", timeout=200)
+
+    # 5. Fyll i en ny titel, t.ex. "Fika"
+    title_input.fill("Fika")
+
+    # 6. Tryck på "Enter" för att spara den nya titeln
+    page.keyboard.press("Enter")
+
+    updated_timer_title = page.locator('h3')
+    expect(updated_timer_title).to_have_text("Fika 🖊️")
 
 
 
